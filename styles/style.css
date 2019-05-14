@@ -1,0 +1,124 @@
+html, body, div, img {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #fff;
+	background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+}
+
+.wrap {
+	display: flex;
+	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 100px 0;
+	justify-content: space-evenly;
+	overflow-x: hidden;
+}
+
+.wrap__content {
+	width: 100%;
+	max-width: 480px;
+	display: flex;
+}
+
+.wrap__contant--rotate {
+	transform: rotate(-10deg)
+}
+
+.wrap__contant--rotate:last-child {
+	transform: rotate(20deg)
+}
+
+.gallery {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	position: relative;
+	width: 100%;
+	padding: 20px 20px 40px;
+	margin: 0 15px;
+
+	background-color: #fff;
+	border: 1px solid #f2f2f2;
+	box-shadow: 10px 10px 20px #f2f2f29a;
+}
+
+.gallery__photos {
+	display: block;
+	width: 100%;
+	position: relative;
+}
+
+.gallery__photos img {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	opacity: 0;
+	transition: .7s linear;
+}
+
+.gallery__photos img.showed {
+	opacity: 1;
+	transition: .7s linear;
+}
+
+.gallery__button {
+	width: 100%;
+	padding-top: 110%;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.gallery__button button {
+	outline: 0;
+	font-size: 10px;
+	letter-spacing: 1px;
+	padding: 5px 0;
+	width: 60px;
+	appearance: none;
+	border: 1px solid #f2f2f2;
+}
+
+.gallery__button button:hover {
+	border: 1px solid #ebebeb;
+	background-color: #ebebeb;
+}
+
+.gallery__button button:active {
+	border: 1px solid #e0e0e0;
+	background-color: #e0e0e0;
+}
+
+
+@media (max-width: 960px) {
+	.wrap {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+}
+
+@media (max-width: 520px) {
+	.wrap__contant--rotate {
+		transform: rotate(0)
+	}
+	
+	.wrap__contant--rotate:last-child {
+		transform: rotate(0)
+	}
+
+	.wrap {
+		padding: 0;
+	}
+
+	.gallery {
+		margin: 20px 15px;
+	}
+}
